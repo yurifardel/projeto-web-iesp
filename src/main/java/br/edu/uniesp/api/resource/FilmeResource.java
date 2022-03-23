@@ -1,22 +1,23 @@
 package br.edu.uniesp.api.resource;
 
 import br.edu.uniesp.api.model.Filme;
+import br.edu.uniesp.api.repository.FilmeRepository;
+import br.edu.uniesp.api.service.FilmeService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/filme")
 public class FilmeResource {
 
-    @GetMapping("/teste")
-    public Filme teste(){
-        Filme f = new Filme();
-        f.setTitulo("Jurassic Park");
-        return f;
-    }
+    @Autowired
+    private FilmeService service;
+
 
     @PostMapping
-    public String salvar(){
-        return "Salvou";
+    public Filme salvar(@RequestBody Filme filme){
+        filme = service.salvar(filme);
+        return filme;
     }
 
     @GetMapping
