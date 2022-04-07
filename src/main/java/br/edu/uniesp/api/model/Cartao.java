@@ -10,7 +10,7 @@ public class Cartao {
 
     @Id
     @GeneratedValue
-    private Integer idCartao;
+    private Integer id;
 
     private String numeroCartao;
     private String validadeCartao;
@@ -23,11 +23,11 @@ public class Cartao {
     }
 
     public Integer getIdCartao() {
-        return idCartao;
+        return id;
     }
 
-    public void setIdCartao(Integer idCartao) {
-        this.idCartao = idCartao;
+    public void setIdCartao(Integer id) {
+        this.id = id;
     }
 
     public void setNumeroCartao(String numeroCartao) {

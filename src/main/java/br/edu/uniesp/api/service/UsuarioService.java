@@ -13,19 +13,21 @@ public class UsuarioService {
     @Autowired
     private UsuarioRepository repository;
 
-    public Usuario salvar(Usuario usuario){
+    public Usuario salvar(Usuario usuario) throws Exception{
+      
         return repository.save(usuario);
+
     }
 
     public Usuario atualizar(Usuario usuario ) throws Exception {
-        if(usuario.getEmail()==null){
-            throw new Exception("Email não cadastrado");
+        if(usuario.getId()==null){
+            throw new Exception("id não cadastrado");
         }
         return repository.save(usuario);
     }
 
-        public void deletar(String usuario){
-            repository.deleteById(usuario);
+        public void deletar(int id){
+            repository.deleteById(id);
         }
 
     public List<Usuario> listar(){

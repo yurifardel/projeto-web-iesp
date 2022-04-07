@@ -13,7 +13,7 @@ import java.util.List;
 public class CartaoResource {
 
     @Autowired
-    private CartaoResource service;
+    private CartaoService service;
 
     @PostMapping
     public Cartao salvar(@RequestBody Cartao cartao){
@@ -33,10 +33,9 @@ public class CartaoResource {
         return service.listar();
     }
 
-    @DeleteMapping("{idCartao}")
-    public void remover(@PathVariable Integer idCartao){
-        service.deletar(idCartao);
-
+    @DeleteMapping("{id}")
+    public void remover(@PathVariable int id){
+        service.deletar(id);
     }
 
 }

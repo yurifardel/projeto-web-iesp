@@ -23,12 +23,14 @@ public class CartaoService {
         return repository.save(cartao);
     }
 
-    public void deletar(int id){
-        repository.deleteById(id);
-    }
+    
 
     public List<Cartao> listar(){
         return repository.findAll();
+    }
+
+    public void deletar(int id){
+        repository.deleteById(id);
     }
 
 }

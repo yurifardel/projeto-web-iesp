@@ -16,7 +16,7 @@ public class UsuarioResource {
     private UsuarioService service;
 
     @PostMapping
-    public Usuario salvar(@RequestBody Usuario usuario){
+    public Usuario salvar(@RequestBody Usuario usuario) throws Exception{
         usuario = service.salvar(usuario);
         return usuario;
 
@@ -33,9 +33,9 @@ public class UsuarioResource {
         return service.listar();
     }
 
-    @DeleteMapping("{email}")
-    public void remover(@PathVariable String email){
-        service.deletar(email);
+    @DeleteMapping("{id}")
+    public void remover(@PathVariable int id){
+        service.deletar(id);
 
     }
 
