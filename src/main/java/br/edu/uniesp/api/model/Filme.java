@@ -11,7 +11,6 @@ public class Filme implements Serializable {
     @Id
     @GeneratedValue
     private Integer id;
-
     private String titulo;
 
     public Integer getId() {
