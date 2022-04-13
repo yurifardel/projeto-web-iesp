@@ -1,17 +1,22 @@
 package br.edu.uniesp.api.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
+@Table(name = "tb_filme")
 public class Filme implements Serializable {
 
     @Id
     @GeneratedValue
     private Integer id;
+
+    @Column(name = "titulo", length = 100)
     private String titulo;
+
+    @ManyToOne
+    @JoinColumn(name = "genero_id")
+    private Genero genero;
 
     public Integer getId() {
         return id;
