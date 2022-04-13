@@ -5,4 +5,5 @@ Sistemas da Informação
 Yuri Regis,
 Jefferson Avelino,
 Matheus Madeiros,
-Tiago Farias.
+Tiago Farias e 
+Sara Melo.
