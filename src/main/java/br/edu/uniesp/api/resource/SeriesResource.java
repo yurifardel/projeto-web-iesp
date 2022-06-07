@@ -2,7 +2,6 @@ package br.edu.uniesp.api.resource;
 
 import br.edu.uniesp.api.model.Series;
 import br.edu.uniesp.api.service.SeriesService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -12,7 +11,6 @@ import java.util.List;
 @RequestMapping("/series")
 public class SeriesResource {
 
-    @Autowired
     private SeriesService service;
 
     @PostMapping

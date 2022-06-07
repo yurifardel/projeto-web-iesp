@@ -2,7 +2,6 @@ package br.edu.uniesp.api.service;
 
 import br.edu.uniesp.api.model.Series;
 import br.edu.uniesp.api.repository.SeriesRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,7 +9,6 @@ import java.util.List;
 @Service
 public class SeriesService {
 
-    @Autowired
     private SeriesRepository repository;
 
     public Series salvar(Series series){

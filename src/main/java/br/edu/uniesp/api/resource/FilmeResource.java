@@ -2,7 +2,6 @@ package br.edu.uniesp.api.resource;
 
 import br.edu.uniesp.api.model.Filme;
 import br.edu.uniesp.api.service.FilmeService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -11,7 +10,6 @@ import java.util.List;
 @RequestMapping("/filme")
 public class FilmeResource {
 
-    @Autowired
     private FilmeService service;
 
 

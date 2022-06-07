@@ -2,7 +2,6 @@ package br.edu.uniesp.api.resource;
 
 import br.edu.uniesp.api.model.Documentario;
 import br.edu.uniesp.api.service.DocumentarioService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -12,7 +11,6 @@ import java.util.List;
 @RequestMapping("/documentario")
 public class DocumentarioResource {
 
-    @Autowired
     private DocumentarioService service;
 
     @PostMapping

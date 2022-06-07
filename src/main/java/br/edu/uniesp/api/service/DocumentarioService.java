@@ -2,7 +2,6 @@ package br.edu.uniesp.api.service;
 
 import br.edu.uniesp.api.model.Documentario;
 import br.edu.uniesp.api.repository.DocumentarioRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,7 +9,6 @@ import java.util.List;
 @Service
 public class DocumentarioService {
 
-    @Autowired
     private DocumentarioRepository repository;
 
     public Documentario salvar(Documentario documentario){
